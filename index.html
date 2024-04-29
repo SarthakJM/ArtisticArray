@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisticArray</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./images/logo.avif" type="image/x-icon">
+  </head>
+<body>
+    <section class="gallery min-vh-100">
+    
+  <h3>ArtisticArray</h3>
+    
+    <div class="container-lg">
+            <button class="js-changemode-element" onclick="changeMode()"><i class="fa-solid fa-moon"></i></button>
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+
+                <div class="col">
+                    <img src="images/Loading.jpg" class="gallery-item" alt="">
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/1.jpg" class="modal-img" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="js-refresh-element" onclick="reload()"><i class="fa-solid fa-rotate"></i></button>
+</body>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+</html>

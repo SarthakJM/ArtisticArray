@@ -1,0 +1,174 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gallery container */
+.gallery {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px; /* Padding around the gallery */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Individual image container */
+.col {
+    width: 300px; /* Width of each image container */
+    height: 300px; /* Height of each image container */
+    margin: 10px; /* Spacing between image containers */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+.row{
+    margin-top: 50px;
+}
+.gallery h3{
+    position: absolute;
+}
+
+
+/* Image styling */
+.gallery-item {
+    width: 100%; /* Ensure images take full width of their container */
+    height: 100%; /* Ensure images take full height of their container */
+    object-fit: cover; /* Scale images while preserving aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect */
+.gallery-item:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+}
+
+/* Modal image */
+#gallery-modal .modal-img {
+    max-width: 100%; /* Ensure modal image fits within the viewport */
+    max-height: 90vh; /* Limit modal image height to 90% of viewport height */
+    width: auto; /* Allow modal image to scale proportionally */
+    height: auto; /* Allow modal image to scale proportionally */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+.js-changemode-element {
+    width: 100px;
+    height: 50px;
+    border-radius: 15px; /* Adjusted border-radius for a more rounded button */
+    background-color: transparent;
+    border: 2px solid black; /* White border for better visibility */
+    color: black; /* Text color */
+    text-align: center; /* Center text horizontally */
+    line-height: 30px; /* Vertically center text */
+    cursor: pointer;
+    position: absolute;
+    right: 210px; /* Adjust position as needed */
+    top: 20px; /* Adjust position as needed */
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition for color changes */
+}
+
+.js-refresh-element{
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+
+    background-color: transparent;
+    text-align: center; /* Center text horizontally */
+    line-height: 30px; /* Vertically center text */
+    cursor: pointer;
+    position: absolute;
+    right: 100px; /* Adjust position as needed */
+    top: 20px; /* Adjust position as needed */
+    z-index: 1000;
+}
+
+/* Dark mode styling */
+.dark-mode .js-changemode-element {
+    border-color: #fff; /* Adjust border color for dark mode */
+    color: #fff; /* Adjust text color for dark mode */
+}
+
+.dark-mode .js-changemode-element:hover .js-refresh-element:hover{
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust hover background color for dark mode */
+}
+
+.dark-mode 
+{
+    background-color: black;
+    color: white;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width:771px)
+{
+    .col {
+        margin-top: 50px;
+        width: calc(25% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .js-changemode-element{
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        height: 30px;
+    }
+    .js-refresh-element{
+        position: absolute;
+        right: 100px;
+        width: 50px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 770px) {
+    .col {
+        margin-top: 50px;
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .js-changemode-element{
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        height: 30px;
+    }
+    .js-refresh-element{
+        position: absolute;
+        right: 100px;
+        width: 50px;
+        height: 30px;
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+    .col {
+        margin-top: 50px;
+        width: calc(100% - 20px); /* Adjust width for even smaller screens */
+    }
+    .js-changemode-element{
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        height: 30px;
+    }
+    .js-refresh-element{
+        position: absolute;
+        right: 100px;
+        width: 50px;
+        height: 30px;
+    }
+}
